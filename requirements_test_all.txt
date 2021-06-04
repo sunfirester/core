@@ -143,7 +143,7 @@ aiopvapi==1.6.14
 aiopvpc==2.1.2
 
 # homeassistant.components.webostv
-aiopylgtv==0.4.0
+aiopylgtv==0.4.1
 
 # homeassistant.components.recollect_waste
 aiorecollect==1.0.4
