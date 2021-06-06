@@ -61,21 +61,3 @@ class LgWebOSNotificationService(BaseNotificationService):
             PyLGTVCmdException,
         ):
             _LOGGER.error("TV unreachable")
-            
-    async def async_change_picture_mode(self, picture_mode=""):
-        """Send a message to the tv."""
-        try:
-            if not self._client.is_connected():
-                await self._client.connect()
-            await self._client.set_current_picture_mode(picture_mode)
-        except PyLGTVPairException:
-            _LOGGER.error("Pairing with TV failed")
-        except (
-            OSError,
-            ConnectionClosed,
-            ConnectionRefusedError,
-            asyncio.TimeoutError,
-            asyncio.CancelledError,
-            PyLGTVCmdException,
-        ):
-            _LOGGER.error("TV unreachable")
